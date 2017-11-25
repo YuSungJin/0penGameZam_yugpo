@@ -1,12 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGameZam_yugpo", "OpenGameZam_yugpo.csproj", "{8C621B6A-0782-8E08-DF92-6AAE195A70A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C621B6A-0782-8E08-DF92-6AAE195A70A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C621B6A-0782-8E08-DF92-6AAE195A70A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C621B6A-0782-8E08-DF92-6AAE195A70A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C621B6A-0782-8E08-DF92-6AAE195A70A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
