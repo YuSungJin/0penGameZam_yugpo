@@ -40,7 +40,7 @@ public class TreeCtrl : MonoBehaviour {
     public void HitTree(int damage) //나무 클릭(데미지)
     {
         Treehp -= damage;
-        HpBar.fillAmount -= (float)damage / Treehp;
+        //HpBar.fillAmount -= (float)damage / Treehp;
 
     }
 }
