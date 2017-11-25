@@ -7,8 +7,15 @@ public class StartButton : MonoBehaviour
 {
 
 
-	public void OnClickButton()
+
+    public void OnClickButton()
     {
-        SceneManager.LoadScene("MainGame");
+
+
+        FadeInOut pScriptTempObject = GetComponent<FadeInOut>();
+        StartCoroutine(pScriptTempObject.FadeOut());
+
+
+        //SceneManager.LoadScene("MainGame");
     }
 }
