@@ -6,16 +6,37 @@ using UnityEngine.SceneManagement;
 public class StartButton : MonoBehaviour
 {
 
+    FadeInOut pScriptTempObject;
+    Animation pThisButtonAni;
 
+
+    private void StartGame()
+    {
+        pThisButtonAni.Stop();
+        StartCoroutine(pScriptTempObject.FadeOut());
+    }
+
+
+
+    private void Awake()
+    {
+        pScriptTempObject = GetComponent<FadeInOut>();
+        pThisButtonAni = this.GetComponent<Animation>();
+    }
+
+
+    private void Update()
+    {
+        if(Input.anyKeyDown)
+            StartGame();
+        
+
+
+        
+    }
 
     public void OnClickButton()
     {
-
-
-        FadeInOut pScriptTempObject = GetComponent<FadeInOut>();
-        StartCoroutine(pScriptTempObject.FadeOut());
-
-
-        //SceneManager.LoadScene("MainGame");
+        StartGame();
     }
 }

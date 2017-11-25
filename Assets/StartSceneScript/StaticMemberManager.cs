@@ -6,19 +6,11 @@ public class StaticMemberManager : MonoBehaviour
 {
 
 
-    private long lMoney = 0;
-    public long Money { get { return lMoney; } set { lMoney = value; } }
+    public int Money = 0;
+    public int Days = 0;
+    public int SizeOfHungryGauge = 0;
+    public int EquipAxeIndex = 0;
 
-    private int iDays = 0;
-    public int Days {  get { return iDays; } set { iDays = value; } }
-
-    private int iSizeOfHungryGauge = 0;
-    public int SizeOfHungryGauge {  get { return iSizeOfHungryGauge; } set { iSizeOfHungryGauge = value; } }
-
-
-
-    private int iEquipAxeIndex = 0;
-    public int EquipAxeIndex { get { return iEquipAxeIndex; } set { iEquipAxeIndex = value; } }
 
 
     private void Awake()
