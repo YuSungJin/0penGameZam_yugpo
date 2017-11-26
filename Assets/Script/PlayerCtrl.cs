@@ -12,11 +12,40 @@ public class PlayerCtrl : MonoBehaviour {
     public Text AmountText; //할당량(텍스트)
 
     [Header("Player Ability")]
-    public float hungry;
+    private float hungry;
     public int amount;
 
-    private int plrhungry;
-    private int kill = 0;
+    private GameObject TreeObj;
+
+
+    public static int plrhungry = 100;
+    public static int kill = 0;
+
+    private int iCheckAll = 10;
+
+    private StaticMemberManager m_StaticMember = null;
+
+
+    private void Awake()
+    {
+        m_StaticMember = (StaticMemberManager)GameObject.Find("StaticMemberManager").
+                            gameObject.GetComponent<StaticMemberManager>();
+
+        if (m_StaticMember != null)
+        {
+            hungry = m_StaticMember.SizeOfHungryGauge;
+
+            if ((m_StaticMember.Buffer & System.Convert.ToByte("0001", 2)) == System.Convert.ToByte("0001", 2))
+                iCheckAll = 5;
+
+            if ((m_StaticMember.Buffer & System.Convert.ToByte("0100", 2)) == System.Convert.ToByte("0100", 2))
+            {
+                hungry += 30;
+                plrhungry = m_StaticMember.SizeOfHungryGauge + 30;
+            }
+        }
+        amount = iCheckAll;
+    }
 
     // Use this for initialization
     void Start () {
@@ -29,9 +58,8 @@ public class PlayerCtrl : MonoBehaviour {
 
     public void SetAbility(float h, int a)
     {
-        hungry = h;
-        plrhungry = (int)h;
-        amount = a;
+        //plrhungry = (int)h;
+        //amount = a;
         AmountBar.fillAmount = 0;
         AmountText.text = "0/" + amount.ToString();
         HungryText.text = plrhungry.ToString() + hungry.ToString();
@@ -46,6 +74,13 @@ public class PlayerCtrl : MonoBehaviour {
 
     public void AddAmount()
     {
+        if (kill >= iCheckAll)
+            return;
+
+
+
+
+
         kill++;
         AmountBar.fillAmount += 1f / amount;
         AmountText.text = kill.ToString() + "/" + amount.ToString();

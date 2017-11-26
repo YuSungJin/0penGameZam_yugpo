@@ -30,9 +30,6 @@ public class StartButton : MonoBehaviour
         if(Input.anyKeyDown)
             StartGame();
         
-
-
-        
     }
 
     public void OnClickButton()

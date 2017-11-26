@@ -567,7 +567,7 @@ MonoBehaviour:
   fFadeTime: 3
   fWaitTime: 0
   bLoadScene: 1
-  strLoadSceneName: MainGame
+  strLoadSceneName: HomeScene
 --- !u!111 &745560715
 Animation:
   m_ObjectHideFlags: 0
@@ -946,6 +946,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7863e8b5935fab54797322a452207442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Money: 100
+  Days: 1
+  SizeOfHungryGauge: 100
+  EquipAxeIndex: 0
+  Buffer: 0
+  cntHungryFail: 0
+  cntAmountFail: 0
 --- !u!4 &2001252039
 Transform:
   m_ObjectHideFlags: 0
