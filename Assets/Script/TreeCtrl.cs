@@ -116,7 +116,8 @@ public class TreeCtrl : MonoBehaviour {
     public void HpReset()
     {
         TreeHp = Hp;
-        TreeImgRect.sizeDelta = new Vector2(10, 10);
+        if(TreeImgRect != null)
+            TreeImgRect.sizeDelta = new Vector2(10, 10);
     }
 
     public void HitTree( ) //나무 클릭(데미지)

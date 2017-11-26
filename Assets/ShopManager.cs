@@ -161,6 +161,8 @@ public class ShopManager : MonoBehaviour {
     {
         m_StaticMember = (StaticMemberManager)GameObject.Find("StaticMemberManager").
                             gameObject.GetComponent< StaticMemberManager>();
+
+        DontDestroyOnLoad(GameObject.Find("StaticMemberManager"));
     }
 
     // Use this for initialization
@@ -182,7 +184,7 @@ public class ShopManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		
+
 	}
 
     public void BufferOneActive()
